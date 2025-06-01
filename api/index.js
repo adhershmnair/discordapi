@@ -14,7 +14,7 @@ app.use(helmet());
 app.set("trust proxy", 1);
 const PORT = process.env.PORT || 3000;
 const DISCORD_BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
-const CACHE_TTL = parseInt(process.env.CACHE_TTL || "60", 10);
+const CACHE_TTL = parseInt(process.env.CACHE_TTL || "21600", 10);
 
 if (!DISCORD_BOT_TOKEN) {
   throw new Error("Missing DISCORD_BOT_TOKEN in .env");
