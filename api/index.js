@@ -82,6 +82,12 @@ async function getBanner(userId, size = 512) {
 // -------------------
 // Routes
 // -------------------
+app.get("/", (req, res) => {
+  res.json({
+    message: "Welcome to the Discord Avatar API by Adharsh M",
+  });
+})
+
 app.get("/api", (req, res) => {
   res.json({
     endpoints: [
