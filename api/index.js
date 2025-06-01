@@ -1,10 +1,12 @@
-const express = require("express");
-const cors = require("cors");
-const helmet = require("helmet");
-const rateLimit = require("express-rate-limit");
-const NodeCache = require("node-cache");
-const fetch = (...args) => import("node-fetch").then(({ default: f }) => f(...args));
-require("dotenv").config();
+import express from "express";
+import cors from "cors";
+import helmet from "helmet";
+import rateLimit from "express-rate-limit";
+import NodeCache from "node-cache";
+import fetch from "node-fetch";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -218,4 +220,4 @@ app.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}`);
 });
 
-module.exports = app;
+export default app;
